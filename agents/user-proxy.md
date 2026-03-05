@@ -1,4 +1,5 @@
 ---
+name: "user-proxy"
 description: "Use when interpreting user requests, clarifying requirements, or translating business needs into technical specifications before delegating to the project-manager."
 tools:
   - Read

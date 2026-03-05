@@ -1,4 +1,5 @@
 ---
+name: "frontend-developer"
 description: "Use when implementing UI components, pages, layouts, frontend state management, or client-side functionality."
 tools:
   - Read

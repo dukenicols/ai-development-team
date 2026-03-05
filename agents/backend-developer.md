@@ -1,4 +1,5 @@
 ---
+name: 'backend-developer'
 description: "Use when implementing backend APIs, business logic, server-side functionality, middleware, or service layers."
 tools:
   - Read

@@ -1,4 +1,5 @@
 ---
+name: 'database-engineer'
 description: "Use when designing database schemas, writing migrations, creating indexes, optimizing queries, or making data model decisions."
 tools:
   - Read

@@ -1,4 +1,5 @@
 ---
+name: "project-manager"
 description: "Use when breaking down requirements into tasks, coordinating specialist agents, managing dependencies, and monitoring progress across the development team."
 tools:
   - Read

@@ -1,4 +1,5 @@
 ---
+name: "qa-engineer"
 description: "Use when writing tests (unit, integration, E2E), reviewing code quality, creating test strategies, or validating acceptance criteria."
 tools:
   - Read
