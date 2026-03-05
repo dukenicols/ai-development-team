@@ -1,15 +1,26 @@
-# {DOMAIN_NAME} Domain
+# {DOMAIN_NAME}
 
 ## Overview
-Define the key concepts for this domain here.
+Brief description of this domain and its purpose.
 
 ## Key Concepts
-- **Concept 1** — description
-- **Concept 2** — description
+- **Concept 1:** Definition
+- **Concept 2:** Definition
 
 ## Business Rules
 - Rule 1
 - Rule 2
 
 ## Schema Decisions
-Document schema decisions here as they are made during development.
+Document schema choices as they're made during development.
+
+| Decision | Rationale | Date |
+|----------|-----------|------|
+| | | |
+
+## API Contracts
+Document API endpoints related to this domain.
+
+| Method | Path | Description |
+|--------|------|-------------|
+| | | |

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Agent(user-proxy)",
+      "Agent(project-manager)",
+      "Agent(backend-developer)",
+      "Agent(frontend-developer)",
+      "Agent(database-engineer)",
+      "Agent(qa-engineer)",
+      "Agent(Explore)",
+      "Agent(Plan)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git checkout:*)",
+      "Bash(git worktree:*)"
+    ]
+  }
+}

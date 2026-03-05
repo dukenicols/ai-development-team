@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Agent completed\" >> .claude/agent-activity.log"
+          }
+        ]
+      }
+    ]
+  }
+}

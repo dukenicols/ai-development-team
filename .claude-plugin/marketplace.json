@@ -1,0 +1,15 @@
+{
+  "name": "ai-dev-team",
+  "owner": {
+    "name": "Nicolás Duque"
+  },
+  "plugins": [
+    {
+      "name": "ai-dev-team-framework",
+      "source": "./",
+      "description": "Multi-agent coordination system for distributed software development",
+      "version": "1.0.0",
+      "keywords": ["agents", "framework", "development", "multi-agent"]
+    }
+  ]
+}

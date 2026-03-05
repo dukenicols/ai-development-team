@@ -1,0 +1,15 @@
+# Claude Code worktrees (created by agents with isolation: worktree)
+.claude/worktrees/
+
+# Agent activity log
+.claude/agent-activity.log
+
+# Local settings (user-specific overrides)
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+
+# Environment variables
+.env
+.env.local
