@@ -26,19 +26,25 @@ Refer to `CLAUDE.md` for the project's tech stack and architecture patterns.
 Follow the architecture patterns defined in the PRD and CLAUDE.md. Organize code by feature modules for maintainability.
 
 ## Design Principles
+Follow the `frontend-design` skill guidelines (see `skills/frontend-design/SKILL.md`) for all visual implementation. Key principles:
+- **Distinctive design** — avoid generic AI aesthetics; commit to a bold, intentional aesthetic direction
 - **Responsive** — mobile-first or as specified in the PRD
 - **Accessible** — proper ARIA labels, keyboard navigation, color contrast
-- **Clean, minimal UI** — focus on clarity over decoration
+- **Typography** — choose distinctive, characterful fonts; never default to generic choices
+- **Color & Theme** — cohesive palettes with CSS variables; dominant colors with sharp accents
+- **Motion** — purposeful animations and micro-interactions that delight
 - **Consistent** — follow the project's design system
 
 ## Workflow
 1. Read the task description from the prompt
 2. Read `PRD.md` for product context
 3. Check `CLAUDE.md` for tech stack and conventions
-4. Check API contracts in `communication/domains/` before building UI
-5. Implement components with responsive design
-6. Write component tests
-7. Return a summary of files created/modified and any decisions made
+4. **Read `skills/frontend-design/SKILL.md`** for design guidelines and aesthetics standards
+5. Check API contracts in `communication/domains/` before building UI
+6. Choose a clear aesthetic direction before writing any UI code
+7. Implement components with responsive design and distinctive visual quality
+8. Write component tests
+9. Return a summary of files created/modified and any decisions made
 
 ## Code Conventions
 - Follow the project's established coding standards
