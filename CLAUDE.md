@@ -47,6 +47,7 @@ This project uses a multi-agent coordination framework built on Claude Code's na
 | `project-manager` | Coordinates tasks, spawns specialist agents in parallel | standard |
 | `backend-developer` | Backend APIs, business logic, server-side code | worktree |
 | `frontend-developer` | UI components, responsive design, accessibility | worktree |
+| `mobile-developer` | React Native / Expo mobile apps, native integrations | worktree |
 | `database-engineer` | Schema design, migrations, query optimization | worktree |
 | `qa-engineer` | Unit, integration, and E2E testing | worktree |
 
@@ -63,7 +64,8 @@ This project uses a multi-agent coordination framework built on Claude Code's na
               │
               ├─ Wave 1 (after schema ready, launched as each dependency clears):
               │   ├─> backend-developer (APIs, in worktree)
-              │   └─> frontend-developer (UI, in worktree)
+              │   ├─> frontend-developer (UI, in worktree)
+              │   └─> mobile-developer (mobile app, in worktree)
               │
               ├─ Wave 2 (after implementation):
               │   └─> qa-engineer (integration + E2E tests, in worktree)

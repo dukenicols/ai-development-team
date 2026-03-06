@@ -8,6 +8,7 @@
       "Agent(project-manager)",
       "Agent(backend-developer)",
       "Agent(frontend-developer)",
+      "Agent(mobile-developer)",
       "Agent(database-engineer)",
       "Agent(qa-engineer)",
       "Agent(Explore)",
