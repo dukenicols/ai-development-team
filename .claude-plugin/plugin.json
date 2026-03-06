@@ -1,6 +1,6 @@
 {
   "name": "ai-dev-team-framework",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Multi-agent coordination system — specialized AI agents collaborate to build software with worktree isolation, structured handoffs, and domain knowledge.",
   "author": {
     "name": "Duke"

@@ -1,11 +1,11 @@
-# AI Development Team Framework
+# AI Development Team
 
 ## CRITICAL: Product Requirements Document
 **Every agent MUST read `PRD.md` at the root of this project before starting any work.** The PRD is the single source of truth for what the product is, who it's for, what we're building, and in what order. All implementation decisions must align with the PRD.
 
 ## Project Overview
 <!-- CUSTOMIZE: Replace this section with your product description -->
-This project uses the AI Development Team Framework — a multi-agent coordination system where specialized AI agents collaborate to build software. Define your product in `PRD.md`, configure agents to match your tech stack, and use `/delegate` to assign work.
+This project uses the AI Development Team — a multi-agent coordination system where specialized AI agents collaborate to build software. Define your product in `PRD.md`, configure agents to match your tech stack, and use `/delegate` to assign work.
 
 ## Current Phase
 <!-- CUSTOMIZE: Update this with your current development phase -->
