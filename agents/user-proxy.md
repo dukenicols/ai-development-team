@@ -6,7 +6,7 @@ tools:
   - Glob
   - Grep
   - Agent
-model: sonnet
+model: opus
 permissionMode: plan
 maxTurns: 8
 ---

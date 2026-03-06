@@ -23,15 +23,19 @@ You are the user-proxy agent. The user has delegated the following task to the d
    - **Acceptance Criteria:** Numbered list of verifiable conditions
    - **Affected Domains:** Which domains are involved
    - **Priority:** p1 (critical), p2 (important), p3 (nice-to-have)
+   - **Dependency Graph:** Which tasks block which — e.g. "schema must complete before API work"
+   - **Parallel Opportunities:** Which agents can run concurrently — e.g. "backend + frontend after schema"
 5. Invoke the `project-manager` agent via the Agent tool:
    ```
    Agent({
      subagent_type: "project-manager",
      description: "Coordinate team for: <brief summary>",
-     prompt: "<your structured requirements + full context>"
+     prompt: "<your structured requirements + full context including dependency graph>"
    })
    ```
+   Remind the PM to use TaskCreate for background parallel execution and to merge worktree branches after completion.
 6. Return the project-manager's results back as a summary including:
-   - Tasks completed
+   - Tasks completed (with parallel execution timeline)
    - Files created/modified
+   - Branches merged
    - Any blockers or issues encountered

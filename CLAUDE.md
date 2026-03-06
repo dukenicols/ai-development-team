@@ -55,14 +55,23 @@ This project uses a multi-agent coordination framework built on Claude Code's na
 ```
 /delegate "Add user auth with OAuth"
   └─> user-proxy (clarifies + structures requirements)
-        └─> project-manager (breaks into tasks, manages dependencies)
-              ├─> database-engineer (schema, in worktree)
-              ├─> backend-developer (APIs, in worktree)
-              ├─> frontend-developer (UI, in worktree)
-              └─> qa-engineer (tests, in worktree)
+        └─> project-manager (plans tasks, manages dependency graph)
+              │
+              ├─ Wave 0 (parallel background tasks):
+              │   ├─> database-engineer (schema, in worktree)
+              │   └─> qa-engineer (test scaffolds + plan, in worktree)
+              │
+              ├─ Wave 1 (after schema ready, launched as each dependency clears):
+              │   ├─> backend-developer (APIs, in worktree)
+              │   └─> frontend-developer (UI, in worktree)
+              │
+              ├─ Wave 2 (after implementation):
+              │   └─> qa-engineer (integration + E2E tests, in worktree)
+              │
+              └─ Final: merge all worktree branches → main
 ```
 
-Agents communicate via the **Agent tool** — subagents return results directly to their parent. No file polling, no message queues. Specialist agents run in **git worktrees** for isolation.
+Agents run as **background tasks** via `TaskCreate`/`TaskGet` for true concurrent execution — the PM doesn't block waiting for one agent before launching the next. Specialist agents run in **git worktrees** for file-level isolation. Agents that finish early trigger their dependents immediately, without waiting for the full wave.
 
 ### Domain Knowledge
 Domain knowledge lives in `communication/domains/`. Each domain folder contains a README with business rules, schema decisions, API contracts, and key concepts. All agents read these before implementing.
@@ -76,7 +85,7 @@ Domain knowledge lives in `communication/domains/`. Each domain folder contains 
 ### Git Scripts
 ```bash
 ./scripts/git-agent-commit.sh <agent> <task_id> <type> <scope> <msg>  # Agent-scoped git commit
-./scripts/git-agent-merge.sh <branch-name>                             # Merge agent branch to main
+./scripts/git-agent-merge.sh <branch-1> [branch-2] [branch-3] ...     # Batch merge agent branches to main
 ```
 
 ### Hooks
@@ -86,6 +95,8 @@ Configured in `.claude/settings.json`:
 ### Agent Design Principles
 1. **Agents are stateless** — they read PRD.md, CLAUDE.md, and domain docs for context every time
 2. **Worktree isolation** — specialist agents work on isolated git branches to prevent conflicts
-3. **Parallel execution** — the project-manager spawns independent agents simultaneously
-4. **Direct communication** — subagents return results to parent, no file-based messaging
-5. **Domain docs are the shared memory** — `communication/domains/` is the only persistent inter-agent state
+3. **Background task parallelism** — the PM uses TaskCreate/TaskGet for true concurrent agent execution
+4. **Dependency-driven scheduling** — agents launch as soon as their dependencies clear, not in fixed waves
+5. **Early QA** — test scaffolds and plans are written in parallel with implementation, not just after
+6. **Automated merge coordination** — the PM merges all worktree branches in dependency order after completion
+7. **Domain docs are the shared memory** — `communication/domains/` is the only persistent inter-agent state
