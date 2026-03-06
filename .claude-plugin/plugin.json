@@ -1,12 +1,12 @@
 {
   "name": "ai-dev-team-framework",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Multi-agent coordination system — specialized AI agents collaborate to build software with worktree isolation, structured handoffs, and domain knowledge.",
   "author": {
     "name": "Duke"
   },
-  "homepage": "https://github.com/yourusername/ai-development-team-framework",
-  "repository": "https://github.com/yourusername/ai-development-team-framework",
+  "homepage": "https://github.com/dukenicols/ai-development-team",
+  "repository": "https://github.com/dukenicols/ai-development-team",
   "license": "MIT",
   "keywords": [
     "agents",
